@@ -1,14 +1,13 @@
-const str = process.argv[2];
-const crypto = require("crypto");
+import { readFile } from "fs/promises";
+import { argv } from "process";
+import md5 from "md5";
 
-const hash = () => {
+(async () => {
   try {
-    console.log(
-      "encrypted MD5: " + crypto.createHash("md5").update(str).digest("hex")
-    );
-  } catch (error) {
-    console.error(error);
+    const arg = argv[2];
+    const data = await readFile(arg, "utf8");
+    console.log(md5(data));
+  } catch (err) {
+    console.error(err);
   }
-};
-
-hash();
+})();

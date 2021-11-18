@@ -1,0 +1,1 @@
+{"type":"module","dependencies":{"cli-progress":"^3.9.1","color":"^4.0.1","colors":"^1.4.0","crypto":"^1.0.1","exec":"^0.2.1","md5":"^2.3.0","md5-hex":"^4.0.0","prompt":"^1.2.0"}}
